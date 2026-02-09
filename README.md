@@ -14,10 +14,6 @@
 
 Material da disciplina de Computação Gráfica  
 
-## Jogo - Play Grand Gate
-
-[Jogo - Play Grand Gate](https://github.com/dalton-reis/dalton-reis/tree/main#jogo---play-grand-gate)  
-
 ## Atenção  
 
 Faça o seu trabalho, cópias receberão nota zero. O professor pode a qualquer momento questionar e avaliar o trabalho desenvolvido. O aluno deve demonstrar conhecimento do código implementado respondendo principalmente questões relacionadas ao conteúdo apresentado, e não somente saber "ler" o código desenvolvido.  
