@@ -1,6 +1,6 @@
 # Disciplina de Computação Gráfica  
 
-<freeform://open?url=https://freeform/021uRhUAerS6bXID34er_bHeA#disciplina_CG>
+<!-- <freeform://open?url=https://freeform/021uRhUAerS6bXID34er_bHeA#disciplina_CG> -->
 
 <!-- [AVA3 Matutino]: <https://ava3.furb.br/course/view.php?id=47758&section=0> "AVA3" 
 [AVA3 Matutino Equipes]: <https://ava3.furb.br/mod/forum/view.php?id=1099470> "AVA3 Equipes" 
