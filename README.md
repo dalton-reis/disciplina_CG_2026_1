@@ -2,14 +2,6 @@
 
 <!-- <freeform://open?url=https://freeform/021uRhUAerS6bXID34er_bHeA#disciplina_CG> -->
 
-<!-- [AVA3 Matutino]: <https://ava3.furb.br/course/view.php?id=47758&section=0> "AVA3" 
-[AVA3 Matutino Equipes]: <https://ava3.furb.br/mod/forum/view.php?id=1099470> "AVA3 Equipes" 
-[AVA3 Matutino Plano]: <https://ava3.furb.br/course/view.php?id=47758&section=1> "Plano de Ensino"  -->
-
-[AVA3 Noturno]: <https://ava3.furb.br/course/view.php?id=51173&section=0> "AVA3"  
-[AVA3 Noturno Equipes]: <https://ava3.furb.br/mod/forum/view.php?id=1201806> "AVA3 Equipes"  
-[AVA3 Noturno Plano]: <https://ava3.furb.br/course/view.php?id=51173&section=1> "Plano de Ensino"  
-
 [Cronograma]: <./cronograma.md> "Cronograma"  
 
 Material da disciplina de Computação Gráfica  
@@ -18,7 +10,7 @@ Material da disciplina de Computação Gráfica
 
 Faça o seu trabalho, cópias receberão nota zero. O professor pode a qualquer momento questionar e avaliar o trabalho desenvolvido. O aluno deve demonstrar conhecimento do código implementado respondendo principalmente questões relacionadas ao conteúdo apresentado (a resposta deve ser do alunos, não de uma assistente de IA), e não somente saber "ler" o código desenvolvido.  
 
-O GitHub de cada equipe vai ser criado pelo professor após as definições das equipes. Então não esqueça de definir a sua equipe usando o <!--[AVA3 Matutino Equipes] ou -->[AVA3 Noturno Equipes], onde somente um aluno da equipe posta o **nome completo** dos integrantes e os **usuários do GitHub**. Aconselhasse fortemente manter os integrantes que compõem a equipe até o final do semestre.  
+O GitHub de cada equipe vai ser criado pelo professor após as definições das equipes. Então não esqueça de definir a sua equipe usando o **Equipes**, onde somente um aluno da equipe posta o **nome completo** dos integrantes e os **usuários do GitHub**. Aconselhasse fortemente manter os integrantes que compõem a equipe até o final do semestre.  
 
 Todos os trabalhos serão desenvolvidos em equipe (**máximo quatro alunos**) e devem ser postados no GitHub até a data definida no [cronograma](cronograma.md "cronograma").  
 
@@ -32,9 +24,7 @@ Vocês irão notar que quando preciso fazer algum rabisco eu uso o Draw.io. Para
 
 ## [Matriz curricular BCC](<https://github.com/dalton-reis/dalton-reis/blob/main/_._/matriz_BCC.pdf> "Matriz curricular BCC")  
 
-## <!-- [AVA3 Matutino] ou -->[AVA3 Noturno]
-
-## <!-- [AVA3 Matutino Plano] ou -->[AVA3 Noturno Plano]  
+## Ver AVA - Plano de Ensino
 
 ## [Cronograma]  
 
