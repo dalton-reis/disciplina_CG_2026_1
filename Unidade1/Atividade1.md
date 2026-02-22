@@ -1,9 +1,6 @@
 # Unidade 1: Introdução - atividade
 
-<!--[AVA3 Matutino Equipes]: <https://ava3.furb.br/mod/forum/view.php?id=897299> "AVA3 Equipes"  -->
-[AVA3 Noturno Equipes]: <https://ava3.furb.br/mod/forum/view.php?id=991780> "AVA3 Equipes"  
-
-Os assuntos serão sorteados pelo professor e enviados para cada equipe, então não esqueça de definir sua equipe no AVA3 (<!--[AVA3 Matutino Equipes] ou -->[AVA3 Noturno Equipes]).
+Os assuntos serão sorteados pelo professor e enviados para cada equipe, então não esqueça de definir sua equipe no **Equipes no AVA**.
 
 O que deve ser feito:
 
