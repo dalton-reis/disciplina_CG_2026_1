@@ -10,7 +10,7 @@ Material da disciplina de Computação Gráfica
 
 Faça o seu trabalho, cópias receberão nota zero. O professor pode a qualquer momento questionar e avaliar o trabalho desenvolvido. O aluno deve demonstrar conhecimento do código implementado respondendo principalmente questões relacionadas ao conteúdo apresentado (a resposta deve ser do alunos, não de uma assistente de IA), e não somente saber "ler" o código desenvolvido.  
 
-O GitHub de cada equipe vai ser criado pelo professor após as definições das equipes. Então não esqueça de definir a sua equipe usando o **Equipes**, onde somente um aluno da equipe posta o **nome completo** dos integrantes e os **usuários do GitHub**. Aconselhasse fortemente manter os integrantes que compõem a equipe até o final do semestre.  
+O GitHub de cada equipe vai ser criado pelo professor após as definições das equipes. Então não esqueça de definir a sua equipe usando o **Equipes no AVA**, onde somente um aluno da equipe posta o **nome completo** dos integrantes e os **usuários do GitHub**. Aconselhasse fortemente manter os integrantes que compõem a equipe até o final do semestre.  
 
 Todos os trabalhos serão desenvolvidos em equipe (**máximo quatro alunos**) e devem ser postados no GitHub até a data definida no [cronograma](cronograma.md "cronograma").  
 
