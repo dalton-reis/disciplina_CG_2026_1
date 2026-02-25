@@ -18,7 +18,13 @@ Todos os trabalhos serão desenvolvidos em equipe (**máximo quatro alunos**) e 
 
 [https://www.zotero.org/groups/daltonreis_cg](https://www.zotero.org/groups/daltonreis_cg)  
 
-## Rabiscos - aulaRabiscos.drawio.svg
+## Rabiscos
+
+### Rabiscos - FreeForm (Apple)
+
+[disciplina_CG_aulas_Freeform](https://www.icloud.com/freeform/0c4lo1IrJ_sqr9iG5QdX-cyNg#disciplina_CG_aulas "disciplina_CG_aulas_Freeform")  
+
+### Rabiscos - aulaRabiscos.drawio.svg
 
 Vocês irão notar que quando preciso fazer algum rabisco eu uso o Draw.io. Para quem quiser o Draw.io pode ser instalado no Windows/MacOS/Linux, ou mesmo usando direto no navegador em: [https://app.diagrams.net/](https://app.diagrams.net/ "https://app.diagrams.net/"). Ou ainda usando uma versão com um layout de *writeboard* [https://sketch.diagrams.net/](https://sketch.diagrams.net/ "https://sketch.diagrams.net/").  
 
