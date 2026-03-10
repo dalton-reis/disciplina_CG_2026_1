@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"dotnet.defaultSolution": "1-CreatingAWindow/1-CreatingAWindow.sln",
+		"open-translate.sourceLanguage": "auto",
+		"open-translate.targetLanguage": "pt"
+	}
+}
