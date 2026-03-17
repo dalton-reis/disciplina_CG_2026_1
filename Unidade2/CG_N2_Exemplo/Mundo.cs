@@ -11,7 +11,7 @@ using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+// using System.Diagnostics;
 
 namespace gcgcg
 {
@@ -34,18 +34,15 @@ namespace gcgcg
     private int _vertexBufferObject_sruEixos;
     private int _vertexArrayObject_sruEixos;
 
-    // FPS
-    private int frames = 0;
-    private Stopwatch stopwatch = new();
+    // // FPS
+    // private int frames = 0;
+    // private Stopwatch stopwatch = new();
 #endif
 
     private Shader _shaderVermelha;
     private Shader _shaderVerde;
     private Shader _shaderAzul;
     private Shader _shaderCiano;
-
-    private bool mouseMovtoPrimeiro = true;
-    private Ponto4D mouseMovtoUltimo;
 
     public Mundo(GameWindowSettings gameWindowSettings, NativeWindowSettings nativeWindowSettings)
       : base(gameWindowSettings, nativeWindowSettings)
@@ -82,7 +79,7 @@ namespace gcgcg
       GL.EnableVertexAttribArray(0);
       #endregion
 
-      stopwatch.Start();
+      // stopwatch.Start();
 #endif
 
       #region Objeto: polígono qualquer, só para testes e ajudar no desenvolvimento  
@@ -147,7 +144,7 @@ namespace gcgcg
       base.OnRenderFrame(e);
 
       GL.Clear(ClearBufferMask.ColorBufferBit);
-#if CG_Debug
+#if CG_DEBUG
       CheckGLError("Após GL.Clear");
 #endif
 
@@ -157,13 +154,13 @@ namespace gcgcg
 #if CG_Gizmo
       Gizmo_Sru3D();
 
-      frames++;
-      if (stopwatch.ElapsedMilliseconds >= 1000)
-      {
-        Console.WriteLine($"FPS: {frames}");
-        frames = 0; 
-        stopwatch.Restart();
-      }
+      // frames++;
+      // if (stopwatch.ElapsedMilliseconds >= 1000)
+      // {
+      //   Console.WriteLine($"FPS: {frames}");
+      //   frames = 0; 
+      //   stopwatch.Restart();
+      // }
 #endif
       SwapBuffers();
     }
@@ -219,24 +216,7 @@ namespace gcgcg
       Ponto4D mousePonto = new(MousePosition.X, MousePosition.Y);
       Ponto4D sruPonto = Utilitario.NDC_TelaSRU(janelaLargura, janelaAltura, mousePonto);
 
-      if (estadoTeclado.IsKeyPressed(Keys.LeftShift))
-      {
-        if (mouseMovtoPrimeiro)
-        {
-          mouseMovtoUltimo = sruPonto;
-          mouseMovtoPrimeiro = false;
-        }
-        else
-        {
-          var deltaX = sruPonto.X - mouseMovtoUltimo.X;
-          var deltaY = sruPonto.Y - mouseMovtoUltimo.Y;
-          mouseMovtoUltimo = sruPonto;
-
-          objetoSelecionado.PontosAlterar(new Ponto4D(objetoSelecionado.PontosId(0).X + deltaX, objetoSelecionado.PontosId(0).Y + deltaY, 0), 0);
-          objetoSelecionado.ObjetoAtualizar();
-        }
-      }
-      if (estadoTeclado.IsKeyPressed(Keys.LeftShift))
+      if (estadoTeclado.IsKeyPressed(Keys.LeftShift) && objetoSelecionado != null && objetoSelecionado.PontosListaTamanho > 0)
       {
         objetoSelecionado.PontosAlterar(sruPonto, 0);
         objetoSelecionado.ObjetoAtualizar();
@@ -298,7 +278,7 @@ namespace gcgcg
 #endif
     }
 
-#if CG_Debug
+#if CG_DEBUG
     public static void CheckGLError(string message = "")
     {
         var error = GL.GetError();

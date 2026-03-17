@@ -87,28 +87,45 @@ namespace CG_Biblioteca
             return GL.GetAttribLocation(Handle, attribName);
         }
 
+        private bool TryGetUniformLocation(string name, out int location)
+        {
+            return _uniformLocations.TryGetValue(name, out location);
+        }
+
         public void SetInt(string name, int data)
         {
+            if (!TryGetUniformLocation(name, out var location))
+                return;
+
             GL.UseProgram(Handle);
-            GL.Uniform1(_uniformLocations[name], data);
+            GL.Uniform1(location, data);
         }
 
         public void SetFloat(string name, float data)
         {
+            if (!TryGetUniformLocation(name, out var location))
+                return;
+
             GL.UseProgram(Handle);
-            GL.Uniform1(_uniformLocations[name], data);
+            GL.Uniform1(location, data);
         }
 
         public void SetMatrix4(string name, Matrix4 data)
         {
+            if (!TryGetUniformLocation(name, out var location))
+                return;
+
             GL.UseProgram(Handle);
-            GL.UniformMatrix4(_uniformLocations[name], true, ref data);
+            GL.UniformMatrix4(location, true, ref data);
         }
 
         public void SetVector3(string name, Vector3 data)
         {
+            if (!TryGetUniformLocation(name, out var location))
+                return;
+
             GL.UseProgram(Handle);
-            GL.Uniform3(_uniformLocations[name], data);
+            GL.Uniform3(location, data);
         }
     }
 }

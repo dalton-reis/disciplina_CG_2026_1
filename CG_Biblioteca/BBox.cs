@@ -75,6 +75,15 @@ namespace CG_Biblioteca
     {
       float[] _bbox = BBoxConverter();
 
+      if (_vertexBufferObject_bbox != 0)
+      {
+        GL.DeleteBuffer(_vertexBufferObject_bbox);
+      }
+      if (_vertexArrayObject_bbox != 0)
+      {
+        GL.DeleteVertexArray(_vertexArrayObject_bbox);
+      }
+
       _vertexBufferObject_bbox = GL.GenBuffer();
       GL.BindBuffer(BufferTarget.ArrayBuffer, _vertexBufferObject_bbox);
       GL.BufferData(BufferTarget.ArrayBuffer, _bbox.Length * sizeof(float), _bbox, BufferUsageHint.StaticDraw);
@@ -93,16 +102,9 @@ namespace CG_Biblioteca
     }
 
     /// Verifica se um ponto está dentro da BBox.
-    //FIXME: tem duas rotinas de dentro, aqui e na matematica
     public bool Dentro(Ponto4D pto)
     {
-      if (pto.X >= ObterMenorX && pto.X <= ObterMaiorX &&
-          pto.Y >= ObterMenorY && pto.Y <= ObterMaiorY &&
-          pto.Z >= ObterMenorZ && pto.Z <= ObterMaiorZ)
-      {
-        return true;
-      }
-      return false;
+      return Matematica.Dentro(this, pto);
     }
 
     /// Obter menor valor X da BBox.
@@ -157,7 +159,7 @@ namespace CG_Biblioteca
       return _bbox;
     }
 
-#if CG_Debug
+#if CG_DEBUG
     public override string ToString()
     {
       System.Console.WriteLine("__________________________________ \n");

@@ -74,7 +74,7 @@ namespace CG_Biblioteca
     /// <value>coordenada w</value>
     public double W { get => w; }
 
-#if CG_Debug
+#if CG_DEBUG
     public override string ToString()
     {
       System.Console.WriteLine("__________________________________ \n");

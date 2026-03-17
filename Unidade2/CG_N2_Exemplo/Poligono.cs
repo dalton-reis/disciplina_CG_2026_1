@@ -20,7 +20,7 @@ namespace gcgcg
       base.ObjetoAtualizar();
     }
 
-#if CG_Debug
+#if CG_DEBUG
     public override string ToString()
     {
       System.Console.WriteLine("__________________________________ \n");

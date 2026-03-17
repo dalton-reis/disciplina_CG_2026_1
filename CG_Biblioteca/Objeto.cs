@@ -110,6 +110,15 @@ namespace CG_Biblioteca
 
       GL.PointSize(primitivaTamanho);
 
+      if (_vertexBufferObject != 0)
+      {
+        GL.DeleteBuffer(_vertexBufferObject);
+      }
+      if (_vertexArrayObject != 0)
+      {
+        GL.DeleteVertexArray(_vertexArrayObject);
+      }
+
       _vertexBufferObject = GL.GenBuffer();
       GL.BindBuffer(BufferTarget.ArrayBuffer, _vertexBufferObject);
       GL.BufferData(BufferTarget.ArrayBuffer, vertices.Length * sizeof(float), vertices, BufferUsageHint.StaticDraw);
@@ -424,7 +433,7 @@ namespace CG_Biblioteca
       return false;
     }
 
-#if CG_Debug
+#if CG_DEBUG
     protected string ImprimeToString()
     {
       Console.WriteLine("__________________________________ \n");

@@ -69,6 +69,10 @@ namespace CG_Biblioteca
 
     public static double ScanLineInterseccao(double yi, double y1, double y2)
     {
+      if (Math.Abs(y2 - y1) < 1e-12)
+      {
+        return double.NaN;
+      }
       return (yi - y1) / (y2 - y1);
     }
 
@@ -82,6 +86,10 @@ namespace CG_Biblioteca
     public static bool ScanLine(Ponto4D ptoClique, Ponto4D ptoIni, Ponto4D ptoFim)
     {
       double ti = ScanLineInterseccao(ptoClique.Y, ptoIni.Y, ptoFim.Y);
+      if (double.IsNaN(ti))
+      {
+        return false;
+      }
       if (ti >= 0 && ti <= 1)    // lado do polígono (segmento) Intersecciona a ScanLine
       {
         double xi = InterpolarRetaValor(ptoIni.X, ptoFim.X, ti);

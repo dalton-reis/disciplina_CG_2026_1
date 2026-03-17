@@ -15,28 +15,38 @@ namespace CG_Biblioteca
     {
       GrafocenaAtualizar(mundo, grafoLista);
       var itGrafo = grafoLista.GetEnumerator();
-      itGrafo.MoveNext();
-      itGrafo.MoveNext();
+      if (!itGrafo.MoveNext())
+      {
+        return mundo;
+      }
+      var primeiroEnumerado = itGrafo.Current.Value;
+      if (!itGrafo.MoveNext())
+      {
+        return primeiroEnumerado;
+      }
+      var primeiroObjeto = itGrafo.Current.Value;
       if (objetoSelecionado == null)
       {
-        objetoSelecionado = itGrafo.Current.Value;
+        objetoSelecionado = primeiroObjeto;
         return objetoSelecionado;
       }
       if (objetoSelecionado.Rotulo == '@')
       {
-        objetoSelecionado = itGrafo.Current.Value;
+        objetoSelecionado = primeiroObjeto;
         return objetoSelecionado;
       }
       do
       {
         if (itGrafo.Current.Key == objetoSelecionado.Rotulo)
         {
-          itGrafo.MoveNext();
-          objetoSelecionado = itGrafo.Current.Value;
+          if (itGrafo.MoveNext())
+            objetoSelecionado = itGrafo.Current.Value;
+          else
+            objetoSelecionado = primeiroObjeto;
           return objetoSelecionado;
         }
       } while (itGrafo.MoveNext());
-      return null;
+      return primeiroObjeto;
     }
 
     public static void GrafoCenaImprimir(Objeto mundo, Dictionary<char, Objeto> grafoLista)

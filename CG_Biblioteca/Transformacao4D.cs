@@ -177,7 +177,7 @@ namespace CG_Biblioteca
       }
     }
 
-#if CG_Debug
+#if CG_DEBUG
     public override string ToString()
     {
       Console.WriteLine("__________________________________ \n");
