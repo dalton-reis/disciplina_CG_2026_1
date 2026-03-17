@@ -5,7 +5,7 @@
     <AssemblyName>CG_N2_Exemplo</AssemblyName>
     <TargetFramework>net9.0</TargetFramework>
     <PublishSingleFile>true</PublishSingleFile>
-    <DefineConstants>CG_OpenGL;CG_Gizmo;CG_DEBUG;CG_BBox;CG_Privado</DefineConstants>
+    <DefineConstants>CG_OpenGL;CG_Gizmo;CG_DEBUG;CG_BBox</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
