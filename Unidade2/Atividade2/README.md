@@ -49,7 +49,7 @@ A espeicificação da CG_Biblioteca está em:
 
 ## 1. Círculo no centro do SRU  
 
-Implemente uma aplicação para desenhar um círculo no centro do Sistema de Referência do Universo (SRU), com raio de valor 0.5. Utilize 72 pontos (com um tamanho do ponto de 5) simetricamente distribuídos sobre o perímetro do círculo, de forma que o resultado final seja o mais parecido com o código: [CG_N2_1_win-x64.zip](./CG_N2_1_win-x64.zip "CG_N2_1_win-x64.zip"). Neste caso crie uma nova classe com o nome ```Circulo``` em ```Circulo.cs```, e usem como base as classes: [Ponto.cs](../CG_N2_Exemplo/Ponto.cs), [SegReta.cs](../CG_N2_Exemplo/SegReta.cs), [Retangulo.cs](../CG_N2_Exemplo/Retangulo.cs) e [Poligono.cs](../CG_N2_Exemplo/Poligono.cs).  
+wImplemente uma aplicação para desenhar um círculo no centro do Sistema de Referência do Universo (SRU), com raio de valor 0.5. Utilize 72 pontos (com um tamanho do ponto de 5) simetricamente distribuídos sobre o perímetro do círculo, de forma que o resultado final seja o mais parecido com o código: [CG_N2_1_win-x64.zip](./CG_N2_1_win-x64.zip "CG_N2_1_win-x64.zip") ou [CG_N2_1_linux-x64.zip](./CG_N2_1_linux-x64.zip "CG_N2_1_linux-x64.zip"). Neste caso crie uma nova classe com o nome ```Circulo``` em ```Circulo.cs```, e usem como base as classes: [Ponto.cs](../CG_N2_Exemplo/Ponto.cs), [SegReta.cs](../CG_N2_Exemplo/SegReta.cs), [Retangulo.cs](../CG_N2_Exemplo/Retangulo.cs) e [Poligono.cs](../CG_N2_Exemplo/Poligono.cs).  
 
 Observações:  
 
@@ -65,7 +65,7 @@ Especificação:
 
 ## 2. Primitivas geométricas  
 
-Nesta aplicação a ideia é explorar a utilização das “primitivas geométricas” de forma que o resultado final seja o mais parecido com o código: [CG_N2_2_win-x64.zip](./CG_N2_2_win-x64.zip "CG_N2_2_win-x64.zip"). Aqui se pode usar a classe [Retangulo.cs](../CG_N2_Exemplo/Retangulo.cs).  
+Nesta aplicação a ideia é explorar a utilização das “primitivas geométricas” de forma que o resultado final seja o mais parecido com o código: [CG_N2_2_win-x64.zip](./CG_N2_2_win-x64.zip "CG_N2_2_win-x64.zip") ou [CG_N2_2_linux-x64.zip](./CG_N2_2_linux-x64.zip "CG_N2_2_linux-x64.zip"). Aqui se pode usar a classe [Retangulo.cs](../CG_N2_Exemplo/Retangulo.cs).  
 
 No caso a interação deve ser:  
 
@@ -91,7 +91,7 @@ Ao Sr. Palito "nasce" está com os seus "pés" na origem, e sua "cabeça" na pos
 
 Ah ... o Sr. Palito não se parece muito com o "desenho" do [segmento de reta](../CG_N2_Exemplo/SegReta.cs) que representa um raio de uma [circunferência](#1-círculo-no-centro-do-sru) !!  
 
-Se quiser como é o Sr. Palito "engatinhando" nos seus primeiros dias de "vida" olhem o código: [CG_N2_3_win-x64.zip](./CG_N2_3_win-x64.zip "CG_N2_3_win-x64.zip").
+Se quiser como é o Sr. Palito "engatinhando" nos seus primeiros dias de "vida" olhem o código: [CG_N2_3_win-x64.zip](./CG_N2_3_win-x64.zip "CG_N2_3_win-x64.zip") ou [CG_N2_3_linux-x64.zip](./CG_N2_3_linux-x64.zip "CG_N2_3_linux-x64.zip").
 
 Especificação:  
 
@@ -120,7 +120,7 @@ Usem as classes:
 - [Ponto.cs](../CG_N2_Exemplo/Ponto.cs "Ponto.cs") para desenhar os pontos de controles; e  
 - ```Spline.cs```, crie uma nova classe para representar o objeto gráfico Spline.  
 
-O resultado final deve ser o mais parecido com o código: [CG_N2_4_win-x64.zip](./CG_N2_4_win-x64.zip "CG_N2_4_win-x64.zip")  
+O resultado final deve ser o mais parecido com o código: [CG_N2_4_win-x64.zip](./CG_N2_4_win-x64.zip "CG_N2_4_win-x64.zip") ou [CG_N2_4_linux-x64.zip](./CG_N2_4_linux-x64.zip "CG_N2_4_linux-x64.zip")  
 
 Especificação:  
 
@@ -144,7 +144,7 @@ Aqui só use as classes:
 - ```Ponto.cs``` ([Ponto.cs](../CG_N2_Exemplo/Ponto.cs)): para criar o ponto do centro do círculo menor  
 - ```Retangulo.cs``` ([Retangulo.cs](../CG_N2_Exemplo/Retangulo.cs)): para criar a representação visual da BBox interna  
 
-O resultado final deve ser o mais parecido com o código: [CG_N2_5_win-x64.zip](./CG_N2_5_win-x64.zip "CG_N2_5_win-x64.zip")  
+O resultado final deve ser o mais parecido com o código: [CG_N2_5_win-x64.zip](./CG_N2_5_win-x64.zip "CG_N2_5_win-x64.zip") ou [CG_N2_5_linux-x64.zip](./CG_N2_5_linux-x64.zip "CG_N2_5_linux-x64.zip")  
 
 Especificação:  
 
