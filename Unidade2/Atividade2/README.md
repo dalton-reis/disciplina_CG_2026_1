@@ -1,8 +1,8 @@
+# Unidade 2: OpenGL (OpenTK) - atividade  
+
 [CG_Biblioteca]:            ../../CG_Biblioteca/              "CG_Biblioteca"  
 [CG_Biblioteca_Matematica]: ../../CG_Biblioteca/Matematica.cs "CG_Biblioteca_Matematica"  
 [CG_N2_Exemplo]:            ../CG_N2_Exemplo/              "CG_N2_Exemplo"  
-
-# Unidade 2: OpenGL (OpenTK) - atividade  
 
 Lembretes:
 
@@ -120,7 +120,7 @@ Usem as classes:
 - [Ponto.cs](../CG_N2_Exemplo/Ponto.cs "Ponto.cs") para desenhar os pontos de controles; e  
 - ```Spline.cs```, crie uma nova classe para representar o objeto gráfico Spline.  
 
-O resultado final deve ser o mais parecido com o código: [CG_N2_4_win-x64.zip](./CG_N2_4_win-x64.zip "CG_N2_4_win-x64.zip") ou [CG_N2_4_linux-x64.zip](./CG_N2_4_linux-x64.zip "CG_N2_4_linux-x64.zip")  
+O resultado final deve ser o mais parecido com o código: [CG_N2_4](./CG_N2_4/).  
 
 Especificação:  
 
@@ -162,4 +162,4 @@ Cuide com o prazo de entrega observando o [cronograma](../../cronograma.md).
 
 ----------
 
-## ⏭ [Unidade 3)](../Unidade3/README.md "Unidade 3")  
+## ⏭ [Unidade 3)](../../Unidade3/README.md "Unidade 3")  
