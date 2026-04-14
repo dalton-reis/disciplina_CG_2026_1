@@ -288,10 +288,12 @@ namespace CG_Biblioteca
 
     public void MatrizImprimir()
     {
+#if CG_DEBUG
       System.Console.WriteLine(matriz);
 
       matrizGlobal = ObjetoMatrizGlobal(matriz);
       System.Console.WriteLine(matrizGlobal);
+#endif
     }
     public void MatrizAtribuirIdentidade()
     {

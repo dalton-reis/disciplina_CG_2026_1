@@ -10,8 +10,8 @@ namespace CG_Biblioteca
     private readonly Ponto4D centro = new();
 
 #if CG_OpenGL
-    private int _vertexBufferObject_bbox;
-    private int _vertexArrayObject_bbox;
+  private int _vertexBufferObject_bbox;
+  private int _vertexArrayObject_bbox;
 #endif
     private readonly Shader _shaderAmarela;
 
@@ -24,6 +24,27 @@ namespace CG_Biblioteca
       //GL.DeleteBuffer(_vertexBufferObject_bbox);
       //GL.DeleteVertexArray(_vertexArrayObject_bbox);
 
+    }
+
+    public void OnUnload()
+    {
+      GL.BindBuffer(BufferTarget.ArrayBuffer, 0);
+      GL.BindVertexArray(0);
+      GL.UseProgram(0);
+
+      if (_vertexBufferObject_bbox != 0)
+      {
+        GL.DeleteBuffer(_vertexBufferObject_bbox);
+        _vertexBufferObject_bbox = 0;
+      }
+
+      if (_vertexArrayObject_bbox != 0)
+      {
+        GL.DeleteVertexArray(_vertexArrayObject_bbox);
+        _vertexArrayObject_bbox = 0;
+      }
+
+      GL.DeleteProgram(_shaderAmarela.Handle);
     }
 
     public void Atualizar(Transformacao4D matriz, List<Ponto4D> pontosLista)

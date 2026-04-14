@@ -51,6 +51,7 @@ namespace CG_Biblioteca
 
     public static void GrafoCenaImprimir(Objeto mundo, Dictionary<char, Objeto> grafoLista)
     {
+#if CG_DEBUG
       GrafocenaAtualizar(mundo, grafoLista);
       Console.WriteLine("__________________________________ \n");
       foreach (var par in grafoLista)
@@ -58,6 +59,7 @@ namespace CG_Biblioteca
         // Console.WriteLine($"Chave: {par.Key}, Valor: {par.Value}");
         Console.WriteLine($"Chave: {par.Key}");
       }
+#endif
     }
 
 

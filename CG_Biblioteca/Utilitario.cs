@@ -48,6 +48,7 @@ namespace CG_Biblioteca
 
     public static void Diretivas()
     {
+#if CG_DEBUG
       Console.WriteLine("_ Diretivas de Compilação: _______ \n");
 #if CG_OpenGL
       Console.WriteLine("CG_OpenGL - renderizado OpenGL");
@@ -65,6 +66,7 @@ namespace CG_Biblioteca
       Console.WriteLine("CG_Privado - código do professor");
 #endif
       Console.WriteLine("__________________________________ \n");
+#endif
     }
   }
 }
