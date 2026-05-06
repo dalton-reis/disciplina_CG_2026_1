@@ -96,7 +96,7 @@ Observação: as transformações são sempre em relação à origem.
 >
 > As transformações de translação, escala e rotação utilizam as operações de soma, multiplicação e seno/cosseno, respectivamente. Mas não são operações aritméticas, mas sim operações geométricas. E no caso de transformações geométricas homogêneas se utiliza **matrizes** para fazer estas operações. A matriz tem a dimensão do espaço gráfico $(x,y,z)$ mais um, onde este mais um é o espaço homogêneo. E para se fazer transformação (translação, escala e rotação) se **multiplica** um ponto por esta matriz.  
 
-<https://github.com/dalton-reis/disciplina_CG_2025_1/blob/main/CG_Biblioteca/Transformacao4D.cs#L11-L15>
+<https://github.com/dalton-reis/disciplina_CG_2026_1/blob/main/CG_Biblioteca/Transformacao4D.cs#L11-L15>
 
 #### Matriz: propriedades
 
@@ -131,7 +131,7 @@ A matriz $identidade$ é o elemento neutro na multiplicação de matrizes.
  \end{bmatrix}
 ```
 
-<https://github.com/dalton-reis/disciplina_CG_2025_1/blob/main/CG_Biblioteca/Transformacao4D.cs#L71-L78>
+<https://github.com/dalton-reis/disciplina_CG_2026_1/blob/main/CG_Biblioteca/Transformacao4D.cs#L71-L78>
 
 #### Translação homogênea 3D: origem
 
@@ -204,7 +204,7 @@ z + dz = z'
  \end{bmatrix}
 ```
 
-<https://github.com/dalton-reis/disciplina_CG_2025_1/blob/main/CG_Biblioteca/Transformacao4D.cs#L82-L88>
+<https://github.com/dalton-reis/disciplina_CG_2026_1/blob/main/CG_Biblioteca/Transformacao4D.cs#L82-L88>
 
 #### Escala homogênea 3D: origem
 
@@ -286,7 +286,7 @@ z \times sz = z'
  \end{bmatrix}
 ```
 
-<https://github.com/dalton-reis/disciplina_CG_2025_1/blob/main/CG_Biblioteca/Transformacao4D.cs#L93-L99>
+<https://github.com/dalton-reis/disciplina_CG_2026_1/blob/main/CG_Biblioteca/Transformacao4D.cs#L93-L99>
 
 #### Rotação homogênea 3D: origem
 
@@ -336,7 +336,7 @@ A Rotação de um ponto $P(x,y,z)$ no plano ocorre em relação as dimensões do
  \end{bmatrix}
 ```
 
-<https://github.com/dalton-reis/disciplina_CG_2025_1/blob/main/CG_Biblioteca/Transformacao4D.cs#L103-L110>
+<https://github.com/dalton-reis/disciplina_CG_2026_1/blob/main/CG_Biblioteca/Transformacao4D.cs#L103-L110>
 
 ##### Rotação eixo Y: Matriz Homogênea
 
@@ -370,7 +370,7 @@ A Rotação de um ponto $P(x,y,z)$ no plano ocorre em relação as dimensões do
  \end{bmatrix}
 ```
 
-<https://github.com/dalton-reis/disciplina_CG_2025_1/blob/main/CG_Biblioteca/Transformacao4D.cs#L114-L121>
+<https://github.com/dalton-reis/disciplina_CG_2026_1/blob/main/CG_Biblioteca/Transformacao4D.cs#L114-L121>
 
 ##### Rotação eixo Z: Matriz Homogênea
 
@@ -404,7 +404,7 @@ A Rotação de um ponto $P(x,y,z)$ no plano ocorre em relação as dimensões do
  \end{bmatrix}
 ```
 
-<https://github.com/dalton-reis/disciplina_CG_2025_1/blob/main/CG_Biblioteca/Transformacao4D.cs#L125-L132>
+<https://github.com/dalton-reis/disciplina_CG_2026_1/blob/main/CG_Biblioteca/Transformacao4D.cs#L125-L132>
 
 ### Composição de Transformações Geométricas  
 

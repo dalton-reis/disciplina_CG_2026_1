@@ -60,7 +60,7 @@ namespace gcgcg
 
       Utilitario.Diretivas();
 #if CG_DEBUG      
-      Console.WriteLine("Tamanho interno da janela de desenho: " + ClientSize.X + "x" + ClientSize.Y);
+      Console.WriteLine("Tamanho interno da janela de desenho: " + FramebufferSize.X + "x" + FramebufferSize.Y);
 #endif
 
       GL.ClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -288,7 +288,7 @@ namespace gcgcg
       // Exiba o “rasto” ao desenhar os segmentos do polígono.  
       if (MouseState.IsButtonDown(MouseButton.Right) && objetoNovo != null)
       {
-        Ponto4D sruPonto = Utilitario.NDC_TelaSRU(ClientSize.X, ClientSize.Y, new Ponto4D(MousePosition.X, MousePosition.Y));
+        Ponto4D sruPonto = Utilitario.NDC_TelaSRU(FramebufferSize.X, FramebufferSize.Y, new Ponto4D(MousePosition.X, MousePosition.Y));
         if (objetoSelecionado != null)
         {
           sruPonto = objetoSelecionado.MatrizGlobalInversa(sruPonto);
@@ -306,11 +306,11 @@ namespace gcgcg
 #endif
 
         Console.WriteLine("__ Valores do Espaço de Tela");
-        Console.WriteLine("Vector2i windowSize: " + ClientSize);
+        Console.WriteLine("Vector2i windowSize: " + FramebufferSize);
 
         Console.WriteLine("Vector2 mousePosition: " + MousePosition);
 
-        Ponto4D sruPonto = Utilitario.NDC_TelaSRU(ClientSize.X, ClientSize.Y, new Ponto4D(MousePosition.X, MousePosition.Y));
+        Ponto4D sruPonto = Utilitario.NDC_TelaSRU(FramebufferSize.X, FramebufferSize.Y, new Ponto4D(MousePosition.X, MousePosition.Y));
         Console.WriteLine("Vector2 mousePosition (NDC): " + MousePosition);
         if (objetoSelecionado != null)
         {
@@ -327,9 +327,9 @@ namespace gcgcg
       base.OnResize(e);
 
 #if CG_DEBUG      
-      Console.WriteLine("Tamanho interno da janela de desenho: " + ClientSize.X + "x" + ClientSize.Y);
+      Console.WriteLine("Tamanho interno da janela de desenho: " + FramebufferSize.X + "x" + FramebufferSize.Y);
 #endif
-      GL.Viewport(0, 0, ClientSize.X, ClientSize.Y);
+      GL.Viewport(0, 0, FramebufferSize.X, FramebufferSize.Y);
     }
 
     protected override void OnUnload()
