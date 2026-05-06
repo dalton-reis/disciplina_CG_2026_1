@@ -18,12 +18,6 @@ namespace CG_Biblioteca
     public BBox()
     {
       _shaderAmarela = new Shader("Shaders/shader.vert", "Shaders/shaderAmarela.frag");
-      // FIXME: falta deletar ..
-      // GL.DeleteProgram(_shaderAmarela.Handle);
-      // FIXME: deveria ser removido na classe BBox.
-      //GL.DeleteBuffer(_vertexBufferObject_bbox);
-      //GL.DeleteVertexArray(_vertexArrayObject_bbox);
-
     }
 
     public void OnUnload()

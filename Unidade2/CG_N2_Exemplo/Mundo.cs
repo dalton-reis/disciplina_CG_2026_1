@@ -56,7 +56,7 @@ namespace gcgcg
 
       Utilitario.Diretivas();
 #if CG_DEBUG      
-      Console.WriteLine("Tamanho interno da janela de desenho: " + ClientSize.X + "x" + ClientSize.Y);
+      Console.WriteLine("Tamanho interno da janela de desenho: " + FramebufferSize.X + "x" + FramebufferSize.Y);
 #endif
 
       GL.ClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -211,8 +211,8 @@ namespace gcgcg
       #endregion
 
       #region  Mouse
-      int janelaLargura = ClientSize.X;
-      int janelaAltura = ClientSize.Y;
+      int janelaLargura = FramebufferSize.X;
+      int janelaAltura = FramebufferSize.Y;
       Ponto4D mousePonto = new(MousePosition.X, MousePosition.Y);
       Ponto4D sruPonto = Utilitario.NDC_TelaSRU(janelaLargura, janelaAltura, mousePonto);
 
@@ -230,9 +230,9 @@ namespace gcgcg
       base.OnResize(e);
 
 #if CG_DEBUG      
-      Console.WriteLine("Tamanho interno da janela de desenho: " + ClientSize.X + "x" + ClientSize.Y);
+      Console.WriteLine("Tamanho interno da janela de desenho: " + FramebufferSize.X + "x" + FramebufferSize.Y);
 #endif
-      GL.Viewport(0, 0, ClientSize.X, ClientSize.Y);
+      GL.Viewport(0, 0, FramebufferSize.X, FramebufferSize.Y);
     }
 
     protected override void OnUnload()

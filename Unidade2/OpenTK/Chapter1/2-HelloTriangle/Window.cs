@@ -182,7 +182,7 @@ namespace LearnOpenTK
 
             // When the window gets resized, we have to call GL.Viewport to resize OpenGL's viewport to match the new size.
             // If we don't, the NDC will no longer be correct.
-            GL.Viewport(0, 0, ClientSize.X, ClientSize.Y);
+            GL.Viewport(0, 0, FramebufferSize.X, FramebufferSize.Y);
         }
 
         // Now, for cleanup.
