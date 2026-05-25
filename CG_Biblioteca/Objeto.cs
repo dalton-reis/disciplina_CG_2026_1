@@ -33,7 +33,7 @@ namespace CG_Biblioteca
 
     // Transformações do objeto _____________________
     private Transformacao4D matriz = new();
-    private static Transformacao4D matrizGlobal = new();
+    private Transformacao4D matrizGlobal = new();
 
     /// Matrizes temporarias que sempre sao inicializadas com matriz Identidade entao podem ser "static".
     private static Transformacao4D matrizTmpTranslacao = new();
@@ -127,18 +127,21 @@ namespace CG_Biblioteca
       GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 3 * sizeof(float), 0);
       GL.EnableVertexAttribArray(0);
 
-      matrizGlobal = ObjetoMatrizGlobal(matriz);    // Atualiza a matrizGlobal
+      matrizGlobal = ObjetoMatrizGlobal();    // Atualiza a matrizGlobal
       bBox.Atualizar(matrizGlobal, pontosLista);
     }
 
-    public Transformacao4D ObjetoMatrizGlobal(Transformacao4D matrizGlobalPai)
+    public Transformacao4D ObjetoMatrizGlobal()
     {
-      if (rotulo != '@')
+      Transformacao4D matrizGlobalAtual = matriz;
+      Objeto objetoAtual = paiRef;
+
+      while (objetoAtual != null)
       {
-        matrizGlobalPai = paiRef.matriz.MultiplicarMatriz(matrizGlobalPai);
-        matrizGlobalPai = paiRef.ObjetoMatrizGlobal(matrizGlobalPai);
+        matrizGlobalAtual = objetoAtual.matriz.MultiplicarMatriz(matrizGlobalAtual);
+        objetoAtual = objetoAtual.paiRef;
       }
-      return matrizGlobalPai;
+      return matrizGlobalAtual;
     }
 
     public void Desenhar(Transformacao4D matrizGrafo, Objeto objetoSelecionado)
@@ -158,7 +161,7 @@ namespace CG_Biblioteca
         GL.DrawArrays(primitivaTipo, 0, pontosLista.Count);
         if (objetoSelecionado == this)
         {
-          matrizGlobal = ObjetoMatrizGlobal(matriz);
+          matrizGlobal = ObjetoMatrizGlobal();
           // bBox.Atualizar(matrizGlobal, pontosLista);
 #if CG_Gizmo
 #if CG_BBox
@@ -207,7 +210,7 @@ namespace CG_Biblioteca
 
     public Ponto4D MatrizGlobalInversa(Ponto4D mousePto)
     {
-      matrizGlobal = ObjetoMatrizGlobal(matriz);    // Atualiza a matrizGlobal
+      matrizGlobal = ObjetoMatrizGlobal();    // Atualiza a matrizGlobal
 
       matrizGlobal.Inversa();
       return matrizGlobal.MultiplicarPonto(mousePto);
@@ -291,7 +294,7 @@ namespace CG_Biblioteca
 #if CG_DEBUG
       System.Console.WriteLine(matriz);
 
-      matrizGlobal = ObjetoMatrizGlobal(matriz);
+      matrizGlobal = ObjetoMatrizGlobal();
       System.Console.WriteLine(matrizGlobal);
 #endif
     }
@@ -400,7 +403,7 @@ namespace CG_Biblioteca
     {
       if (rotulo != '@')
       {
-        matrizGlobal = ObjetoMatrizGlobal(matriz);    // Atualiza a matrizGlobal
+        matrizGlobal = ObjetoMatrizGlobal();    // Atualiza a matrizGlobal
         bBox.Atualizar(matrizGlobal, pontosLista);
 
         // Teste de seleção do polígono usando a BBox  
@@ -450,17 +453,19 @@ namespace CG_Biblioteca
         string.Format("{0,10}", pontosLista[i].W) + " ]" + "\n";
       }
 
+      Ponto4D ptoTransformado = new();
       retorno += "__ Objeto Transformado: " + rotulo + "\n";
       for (var i = 0; i < pontosLista.Count; i++)
       {
+        ptoTransformado = ObjetoMatrizGlobal().MultiplicarPonto(pontosLista[i]);
         retorno += "P" + i + "[ " +
-        string.Format("{0,10}", pontosLista[i].X) + " | " +
-        string.Format("{0,10}", pontosLista[i].Y) + " | " +
-        string.Format("{0,10}", pontosLista[i].Z) + " | " +
-        string.Format("{0,10}", pontosLista[i].W) + " ]" + "\n";
+        string.Format("{0,10}", ptoTransformado.X) + " | " +
+        string.Format("{0,10}", ptoTransformado.Y) + " | " +
+        string.Format("{0,10}", ptoTransformado.Z) + " | " +
+        string.Format("{0,10}", ptoTransformado.W) + " ]" + "\n";
       }
 
-      bBox.Atualizar(ObjetoMatrizGlobal(matriz), pontosLista);
+      bBox.Atualizar(ObjetoMatrizGlobal(), pontosLista);
       retorno += bBox.ToString();
       return retorno;
     }
