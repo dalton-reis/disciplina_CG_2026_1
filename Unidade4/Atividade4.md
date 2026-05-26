@@ -23,7 +23,7 @@ Prazo: 20/06/2025.
 
 \[peso: 8,0]  
 
-** em construção **
+**EM CONSTRUÇÃO**
 
 ----------
 
